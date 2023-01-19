@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.evmtv</groupId>
+    <artifactId>ActiveMQ-Demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.evmtv.demo</groupId>
+  <artifactId>SimpleActiveMQ</artifactId>
+  <name>SimpleActiveMQ</name>
+  <description>SimpleActiveMQ</description>
+  
+  <dependencies>
+  	<dependency>
+		<groupId>org.apache.activemq</groupId>
+		<artifactId>activemq-all</artifactId>
+		<version>5.16.5</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.xbean/xbean-spring -->
+	<dependency>
+		<groupId>org.apache.xbean</groupId>
+		<artifactId>xbean-spring</artifactId>
+		<version>4.15</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+</dependencies>
+</project>
