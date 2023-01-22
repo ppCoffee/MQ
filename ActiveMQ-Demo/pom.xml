@@ -45,5 +45,6 @@
 	<modules>
 		<module>SimpleActiveMQ</module>
 		<module>ActiveMQ</module>
+		<module>ActiveMQ-spring</module>
 	</modules>
 </project>
