@@ -8,7 +8,7 @@
  * 2023年1月22日
  */
 
-package com.evmtv.demo.server;
+package com.evmtv.server;
 
 import org.apache.activemq.broker.BrokerService;
 

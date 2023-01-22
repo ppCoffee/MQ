@@ -8,7 +8,7 @@
  * 2023年1月19日
  */
 
-package com.evmtv.demo.queue;
+package com.evmtv.queue;
 
 import java.io.IOException;
 

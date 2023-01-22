@@ -8,7 +8,7 @@
  * 2023年1月18日
  */
 
-package com.evmtv.demo.queue;
+package com.evmtv.queue;
 
 import javax.jms.Connection;
 import javax.jms.JMSException;

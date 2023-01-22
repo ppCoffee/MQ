@@ -8,7 +8,7 @@
  * 2023年1月20日
  */
 
-package com.evmtv.demo.topic;
+package com.evmtv.topic;
 
 import javax.jms.Connection;
 import javax.jms.DeliveryMode;
