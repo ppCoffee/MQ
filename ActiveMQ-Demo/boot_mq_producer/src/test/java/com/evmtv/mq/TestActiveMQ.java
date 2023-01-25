@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.evmtv.mq.service.Queue_Producer;
+import com.evmtv.mq.service.Topic_Producer;
 
 @SpringBootTest
 @WebAppConfiguration
@@ -25,8 +26,14 @@ public class TestActiveMQ {
 	@Resource
 	private Queue_Producer queue_producer;
 	
+	@Resource
+	private Topic_Producer topic_producer;
+	
 	@Test
 	public void testSend() {
-		queue_producer.producerMsg();
+		
+//		queue_producer.producerMsg();
+		
+		topic_producer.producer();
 	}
 }

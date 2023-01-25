@@ -32,6 +32,7 @@ public class Queue_Producer {
 
     //发送Queue的方法
     public void producerMsg() {
+    	
         jmsMessagingTemplate.convertAndSend(activeMQQueue, "**************" + UUID.randomUUID().toString());
     }
     

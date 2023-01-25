@@ -1,5 +1,12 @@
-{"properties": [{
-  "name": "myQueueName",
-  "type": "java.lang.String",
-  "description": "A description for 'myQueueName'"
-}]}
+{"properties": [
+  {
+    "name": "myQueueName",
+    "type": "java.lang.String",
+    "description": "A description for 'myQueueName'"
+  },
+  {
+    "name": "myTopicName",
+    "type": "java.lang.String",
+    "description": "A description for 'myTopicName'"
+  }
+]}

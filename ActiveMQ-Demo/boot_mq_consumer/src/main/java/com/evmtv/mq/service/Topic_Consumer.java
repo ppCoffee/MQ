@@ -18,14 +18,13 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Queue_Consumer {
+public class Topic_Consumer {
 	
 	//监听接收的方法
-	@JmsListener(destination = "${myQueueName}")
+	@JmsListener(destination = "${myTopicName}",containerFactory = "jmsListenerContainerFactory")
 	public void consumerMsg(TextMessage textMessage) throws JMSException {
 	    String text = textMessage.getText();
 	    System.out.println("***消费者收到的消息:    " + text);
 	}
-	
-    
+
 }

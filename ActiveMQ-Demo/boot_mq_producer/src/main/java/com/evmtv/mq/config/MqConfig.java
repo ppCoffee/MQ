@@ -11,6 +11,7 @@
 package com.evmtv.mq.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
+import org.apache.activemq.command.ActiveMQTopic;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jms.annotation.EnableJms;
@@ -22,11 +23,20 @@ public class MqConfig {
 
     @Value("${myQueueName}")
     private String myQueueName;
-
+    
+    @Value("${myTopicName}")
+    private String myTopicName;
+    
     @Bean
     ActiveMQQueue queue() {
         //创建一个ActiveMQQueue
         return new ActiveMQQueue(myQueueName);
+    }
+    
+    @Bean
+    ActiveMQTopic topic() {
+        //创建一个ActiveMQQueue
+        return new ActiveMQTopic(myTopicName);
     }
     
 }
