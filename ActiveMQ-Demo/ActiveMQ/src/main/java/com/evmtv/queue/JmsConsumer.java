@@ -18,6 +18,7 @@ import javax.jms.Session;
 import javax.jms.TextMessage;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.RedeliveryPolicy;
 
 public class JmsConsumer {
 	
@@ -29,6 +30,11 @@ public class JmsConsumer {
     	
         //1.创建连接工厂，按照给定的URL，采用默认的用户名密码
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(ACTIVEMQ_URL);
+        
+        RedeliveryPolicy redeliveryPolicy = new RedeliveryPolicy();
+        redeliveryPolicy.setMaximumRedeliveries(3); //DLQ死信重发次数，3次以后将不在接收
+        activeMQConnectionFactory.setRedeliveryPolicy(redeliveryPolicy);
+        
         
         //2.通过连接工厂,获得connection并启动访问
         Connection connection = activeMQConnectionFactory.createConnection();
